@@ -1,23 +1,18 @@
 package model;
 
 public class Servicio {
-
+  private static int cantidadServicios=1;
   private int id;
   private TipoServicio tipoServicio;
   private String descripcion;
   private double duracion;
   private int precio;
 
-  private static int cantidadServicios;
 
-  public Servicio(){
-    cantidadServicios++;
-    this.id=cantidadServicios;
-  }
+
 
   public Servicio(TipoServicio tipoServicio, String descripcion, double duracion, int precio) {
-    cantidadServicios++;
-    this.id = id;
+    this.id = cantidadServicios++;
     this.tipoServicio = tipoServicio;
     this.descripcion = descripcion;
     this.duracion = duracion;
@@ -26,10 +21,6 @@ public class Servicio {
 
   public int getId() {
     return id;
-  }
-
-  public void setId(int id) {
-    this.id = id;
   }
 
   public TipoServicio getTipoServicio() {
@@ -48,9 +39,7 @@ public class Servicio {
     this.descripcion = descripcion;
   }
 
-  public double getDuracion() {
-    return duracion;
-  }
+  public double getDuracion() {return duracion;}
 
   public void setDuracion(double duracion) {
     this.duracion = duracion;
@@ -64,16 +53,22 @@ public class Servicio {
     this.precio = precio;
   }
 
+  public void MostrarDatos(){
+    System.out.println(this.toString());
+  }
+
   @Override
   public String toString() {
     return "Servicio{" +
-        "id=" + id +
-        ", tipoServicio=" + tipoServicio +
-        ", descripcion='" + descripcion + '\'' +
-        ", duracion=" + duracion +
-        ", precio=" + precio +
-        '}';
+            "id=" + id +
+            ", tipoServicio=" + tipoServicio +
+            ", descripcion='" + descripcion + '\'' +
+            ", duracion=" + duracion +
+            ", precio=" + precio +
+            '}';
   }
 }
+
+
 
 

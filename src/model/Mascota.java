@@ -1,24 +1,18 @@
 package model;
 
 public class Mascota {
+  private static int cantidadMascotas=1;
   private int id;
   private String nombre;
-  private String especie;
+  private Especie especie;
   private String raza;
   private int edad;
   private String nombre_dueño;
-  public static int cantidadMascotas;
 
 
-  public Mascota() {
-    cantidadMascotas++;
-    this.id=cantidadMascotas;
 
-  }
-
-  public Mascota(int id, String nombre, String especie, String raza, int edad, String nombre_dueño) {
-    cantidadMascotas++;
-    this.id = id;
+  public Mascota(String nombre, Especie especie, String raza, int edad, String nombre_dueño) {
+    this.id = cantidadMascotas++;
     this.nombre = nombre;
     this.especie = especie;
     this.raza = raza;
@@ -32,24 +26,12 @@ public class Mascota {
     return id;
   }
 
-  public void setId(int id) {
-    this.id = id;
-  }
-
   public String getNombre() {
     return nombre;
   }
 
   public void setNombre(String nombre) {
     this.nombre = nombre;
-  }
-
-  public String getEspecie() {
-    return especie;
-  }
-
-  public void setEspecie(String especie) {
-    this.especie = especie;
   }
 
   public String getRaza() {
@@ -76,18 +58,20 @@ public class Mascota {
     this.nombre_dueño = nombre_dueño;
   }
 
+
+  public void MostrarDatos() {
+    System.out.println(this.toString());
+  }
+
   @Override
   public String toString() {
     return "Mascota{" +
-        "id=" + id +
-        ", nombre='" + nombre + '\'' +
-        ", especie='" + especie + '\'' +
-        ", raza='" + raza + '\'' +
-        ", edad=" + edad +
-        ", nombre_dueño='" + nombre_dueño + '\'' +
-        '}';
-  }
-  public void Mostrarinfo() {
-    System.out.println(toString());
+            "id=" + id +
+            ", nombre='" + nombre + '\'' +
+            ", especie='" + especie + '\'' +
+            ", raza='" + raza + '\'' +
+            ", edad=" + edad +
+            ", nombre_dueño='" + nombre_dueño + '\'' +
+            '}';
   }
 }
