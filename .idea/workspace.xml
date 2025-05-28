@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c2ce85ff-3fd3-4932-8991-9f33507b15a5" name="Changes" comment="Peluqueria Canina">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Especie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Especie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Mascota.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Mascota.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Servicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Servicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/TipoServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TipoServicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Turno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Turno.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +91,17 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Peluqueria Canina" />

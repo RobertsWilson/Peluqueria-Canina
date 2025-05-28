@@ -73,14 +73,32 @@ public class Servicio {
   public String toString() {
     Servicio.precioConIVA(precio);
     return "Servicio{" +
-            "id=" + id +
-            ", tipoServicio=" + tipoServicio +
-            ", descripcion='" + descripcion + '\'' +
-            ", duracion=" + duracion +
-            ", precio=" + precio +
-            ", Precio con IVA= " + precioConIVA(precio) +
-            '}';
+        "id=" + id +
+        ", tipoServicio=" + this.tipoServicio +
+        ", descripcion='" + this.descripcion + '\'' +
+        ", duracion=" + this.duracion +
+        ", precio=" + this.precio +
+        ", Precio con IVA= " + precioConIVA(precio) +
+        '}';
   }
+
+  @Override
+  public boolean equals(Object otroObj){
+    if(otroObj==null) return false;
+    //convertir a tipo servicio
+    Servicio servicio= (Servicio) otroObj;
+
+    //COMPARO PARA VER SI TODOS LO ATRIBUTOS SON IGUALES
+    if (this.descripcion.equals(servicio.getDescripcion()) &&
+        this.duracion== servicio.getDuracion() &&
+        this.precio==servicio.getPrecio() &&
+        this.getTipoServicio().equals(servicio.getTipoServicio()))
+
+    return true;
+    else
+      return false;
+  }
+
 }
 
 
