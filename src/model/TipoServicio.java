@@ -1,5 +1,5 @@
 package model;
 
 public enum TipoServicio {
-  BAÑO, CORTE, LIMPIEZA_OIDOS;
+  BANIO, CORTE_DE_PELO, LIMPIEZA_DE_OIDOS;
 }

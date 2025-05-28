@@ -20,10 +20,38 @@ public class Mascota {
     this.nombre_dueño = nombre_dueño;
   }
 
+  //Funcion Busqueda de mascota en el array
+  public static Mascota buscarMascotas(Mascota[] mascotas, String nombre) {
+    for (Mascota mascota : mascotas) {
+      if (mascota.getNombre().equalsIgnoreCase(nombre)) {
+
+        return mascota;
+      }
+    }
+    return null;
+  }
+
+  //Funcion Contador de especies
+  public static int contarEspecies(Mascota[] mascotas, Especie especie){
+    int contador=0;
+    for (Mascota mascota : mascotas){
+      if (mascota.getEspecie()== especie)
+        contador++;
+    }
+    return contador;
+  }
 
 
   public int getId() {
     return id;
+  }
+
+  public Especie getEspecie() {
+    return especie;
+  }
+
+  public void setEspecie(Especie especie) {
+    this.especie = especie;
   }
 
   public String getNombre() {
